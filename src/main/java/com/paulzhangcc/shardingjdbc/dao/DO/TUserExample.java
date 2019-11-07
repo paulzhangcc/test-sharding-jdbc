@@ -4,23 +4,23 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class UserLoginLogExample {
+public class TUserExample {
     /**
-     * t_user_login_log
+     * t_user
      */
     protected String orderByClause;
 
     /**
-     * t_user_login_log
+     * t_user
      */
     protected boolean distinct;
 
     /**
-     * t_user_login_log
+     * t_user
      */
     protected List<Criteria> oredCriteria;
 
-    public UserLoginLogExample() {
+    public TUserExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -74,7 +74,7 @@ public class UserLoginLogExample {
     }
 
     /**
-     * t_user_login_log null
+     * t_user null
      */
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
@@ -187,73 +187,73 @@ public class UserLoginLogExample {
             return (Criteria) this;
         }
 
-        public Criteria andUserIdIsNull() {
-            addCriterion("user_id is null");
+        public Criteria andMobileIsNull() {
+            addCriterion("mobile is null");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdIsNotNull() {
-            addCriterion("user_id is not null");
+        public Criteria andMobileIsNotNull() {
+            addCriterion("mobile is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdEqualTo(String value) {
-            addCriterion("user_id =", value, "userId");
+        public Criteria andMobileEqualTo(String value) {
+            addCriterion("mobile =", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotEqualTo(String value) {
-            addCriterion("user_id <>", value, "userId");
+        public Criteria andMobileNotEqualTo(String value) {
+            addCriterion("mobile <>", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdGreaterThan(String value) {
-            addCriterion("user_id >", value, "userId");
+        public Criteria andMobileGreaterThan(String value) {
+            addCriterion("mobile >", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdGreaterThanOrEqualTo(String value) {
-            addCriterion("user_id >=", value, "userId");
+        public Criteria andMobileGreaterThanOrEqualTo(String value) {
+            addCriterion("mobile >=", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdLessThan(String value) {
-            addCriterion("user_id <", value, "userId");
+        public Criteria andMobileLessThan(String value) {
+            addCriterion("mobile <", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdLessThanOrEqualTo(String value) {
-            addCriterion("user_id <=", value, "userId");
+        public Criteria andMobileLessThanOrEqualTo(String value) {
+            addCriterion("mobile <=", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdLike(String value) {
-            addCriterion("user_id like", value, "userId");
+        public Criteria andMobileLike(String value) {
+            addCriterion("mobile like", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotLike(String value) {
-            addCriterion("user_id not like", value, "userId");
+        public Criteria andMobileNotLike(String value) {
+            addCriterion("mobile not like", value, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdIn(List<String> values) {
-            addCriterion("user_id in", values, "userId");
+        public Criteria andMobileIn(List<String> values) {
+            addCriterion("mobile in", values, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotIn(List<String> values) {
-            addCriterion("user_id not in", values, "userId");
+        public Criteria andMobileNotIn(List<String> values) {
+            addCriterion("mobile not in", values, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdBetween(String value1, String value2) {
-            addCriterion("user_id between", value1, value2, "userId");
+        public Criteria andMobileBetween(String value1, String value2) {
+            addCriterion("mobile between", value1, value2, "mobile");
             return (Criteria) this;
         }
 
-        public Criteria andUserIdNotBetween(String value1, String value2) {
-            addCriterion("user_id not between", value1, value2, "userId");
+        public Criteria andMobileNotBetween(String value1, String value2) {
+            addCriterion("mobile not between", value1, value2, "mobile");
             return (Criteria) this;
         }
 
@@ -319,7 +319,7 @@ public class UserLoginLogExample {
     }
 
     /**
-     * t_user_login_log
+     * t_user
      */
     public static class Criteria extends GeneratedCriteria {
 
@@ -329,7 +329,7 @@ public class UserLoginLogExample {
     }
 
     /**
-     * t_user_login_log null
+     * t_user null
      */
     public static class Criterion {
         private String condition;

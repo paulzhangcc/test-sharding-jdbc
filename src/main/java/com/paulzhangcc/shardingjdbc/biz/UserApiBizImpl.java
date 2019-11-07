@@ -1,7 +1,7 @@
 package com.paulzhangcc.shardingjdbc.biz;
 
-import com.paulzhangcc.shardingjdbc.dao.DO.User;
-import com.paulzhangcc.shardingjdbc.dao.mapper.UserDAO;
+import com.paulzhangcc.shardingjdbc.dao.DO.TUser;
+import com.paulzhangcc.shardingjdbc.dao.mapper.TUserDAO;
 import com.paulzhangcc.shardingjdbc.swagger.controller.UserApiBiz;
 import com.paulzhangcc.shardingjdbc.swagger.model.UserPage;
 import com.paulzhangcc.shardingjdbc.swagger.model.UserSearchVO;
@@ -20,11 +20,11 @@ import java.util.Date;
 @Component
 public class UserApiBizImpl implements UserApiBiz {
     @Autowired
-    UserDAO userDAO;
+    TUserDAO userDAO;
     @Override
     public Boolean add(UserVO userVO) {
         String uuid = SnowFlakeUtil.getFlowIdInstance().nextStringId();
-        User insertUser = User.builder().id(uuid).createTime(new Date()).mobile(userVO.getMobile()).username("M" + userVO.getMobile()).build();
+        TUser insertUser = TUser.builder().id(uuid).createTime(new Date()).mobile(userVO.getMobile()).build();
         userDAO.insertSelective(insertUser);
         return true;
     }

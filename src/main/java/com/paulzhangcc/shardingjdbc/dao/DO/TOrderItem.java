@@ -1,56 +1,56 @@
 package com.paulzhangcc.shardingjdbc.dao.DO;
 
+import java.io.Serializable;
+import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-import java.util.Date;
-
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UserLoginLog implements Serializable {
+public class TOrderItem implements Serializable {
     /**
      * 
      */
-    
-    private String id;
+    private String orderId;
 
     /**
      * 
      */
-    
     private String userId;
 
     /**
      * 
      */
-    
+    private String desc;
+
+    /**
+     * 
+     */
     private Date createTime;
 
     /**
-     * t_user_login_log
+     * t_order_item
      */
     private static final long serialVersionUID = 1L;
 
     /**
      * 
-     * @return id 
+     * @return order_id 
      */
-    public String getId() {
-        return id;
+    public String getOrderId() {
+        return orderId;
     }
 
     /**
      * 
-     * @param id 
+     * @param orderId 
      */
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setOrderId(String orderId) {
+        this.orderId = orderId == null ? null : orderId.trim();
     }
 
     /**
@@ -67,6 +67,22 @@ public class UserLoginLog implements Serializable {
      */
     public void setUserId(String userId) {
         this.userId = userId == null ? null : userId.trim();
+    }
+
+    /**
+     * 
+     * @return desc 
+     */
+    public String getDesc() {
+        return desc;
+    }
+
+    /**
+     * 
+     * @param desc 
+     */
+    public void setDesc(String desc) {
+        this.desc = desc == null ? null : desc.trim();
     }
 
     /**
@@ -91,8 +107,9 @@ public class UserLoginLog implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
+        sb.append(", orderId=").append(orderId);
         sb.append(", userId=").append(userId);
+        sb.append(", desc=").append(desc);
         sb.append(", createTime=").append(createTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
