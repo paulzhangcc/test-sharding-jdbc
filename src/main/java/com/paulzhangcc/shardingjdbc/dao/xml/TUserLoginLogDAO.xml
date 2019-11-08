@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.paulzhangcc.shardingjdbc.dao.mapper.UserLoginLogDAO">
-  <resultMap id="BaseResultMap" type="com.paulzhangcc.shardingjdbc.dao.DO.UserLoginLog">
+<mapper namespace="com.paulzhangcc.shardingjdbc.dao.mapper.TUserLoginLogDAO">
+  <resultMap id="BaseResultMap" type="com.paulzhangcc.shardingjdbc.dao.DO.TUserLoginLog">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="user_id" jdbcType="VARCHAR" property="userId" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
@@ -67,7 +67,7 @@
   <sql id="Base_Column_List">
     id, user_id, create_time
   </sql>
-  <select id="selectByExample" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.UserLoginLogExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.TUserLoginLogExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -81,13 +81,13 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.UserLoginLogExample">
+  <delete id="deleteByExample" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.TUserLoginLogExample">
     delete from t_user_login_log
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insertSelective" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.UserLoginLog">
+  <insert id="insertSelective" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.TUserLoginLog">
     insert into t_user_login_log
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -112,7 +112,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.UserLoginLogExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.TUserLoginLogExample" resultType="java.lang.Long">
     select count(*) from t_user_login_log
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -144,7 +144,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.UserLoginLog">
+  <update id="updateByPrimaryKeySelective" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.TUserLoginLog">
     update t_user_login_log
     <set>
       <if test="userId != null">
@@ -156,7 +156,7 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <select id="selectByExampleWithRowbounds" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.UserLoginLogExample" resultMap="BaseResultMap">
+  <select id="selectByExampleWithRowbounds" parameterType="com.paulzhangcc.shardingjdbc.dao.DO.TUserLoginLogExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct

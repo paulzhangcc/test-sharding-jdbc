@@ -25,7 +25,7 @@ public class TOrderItem implements Serializable {
     /**
      * 
      */
-    private String desc;
+    private String title;
 
     /**
      * 
@@ -71,18 +71,18 @@ public class TOrderItem implements Serializable {
 
     /**
      * 
-     * @return desc 
+     * @return title 
      */
-    public String getDesc() {
-        return desc;
+    public String getTitle() {
+        return title;
     }
 
     /**
      * 
-     * @param desc 
+     * @param title 
      */
-    public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
     }
 
     /**
@@ -109,7 +109,7 @@ public class TOrderItem implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", orderId=").append(orderId);
         sb.append(", userId=").append(userId);
-        sb.append(", desc=").append(desc);
+        sb.append(", title=").append(title);
         sb.append(", createTime=").append(createTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");

@@ -26,9 +26,9 @@ public interface TOrderItemDAO {
 
     @Insert({
         "insert into t_order_item (order_id, user_id, ",
-        "`desc`, create_time)",
+        "title, create_time)",
         "values (#{orderId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, ",
-        "#{desc,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})"
+        "#{title,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})"
     })
     int insert(TOrderItem record);
 
@@ -40,7 +40,7 @@ public interface TOrderItemDAO {
 
     @Select({
         "select",
-        "order_id, user_id, `desc`, create_time",
+        "order_id, user_id, title, create_time",
         "from t_order_item",
         "where order_id = #{orderId,jdbcType=VARCHAR}"
     })
@@ -56,7 +56,7 @@ public interface TOrderItemDAO {
     @Update({
         "update t_order_item",
         "set user_id = #{userId,jdbcType=VARCHAR},",
-          "`desc` = #{desc,jdbcType=VARCHAR},",
+          "title = #{title,jdbcType=VARCHAR},",
           "create_time = #{createTime,jdbcType=TIMESTAMP}",
         "where order_id = #{orderId,jdbcType=VARCHAR}"
     })

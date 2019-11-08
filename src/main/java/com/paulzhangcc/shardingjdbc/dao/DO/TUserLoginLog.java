@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class TConfig implements Serializable {
+public class TUserLoginLog implements Serializable {
     /**
      * 
      */
@@ -20,12 +20,7 @@ public class TConfig implements Serializable {
     /**
      * 
      */
-    private String key;
-
-    /**
-     * 
-     */
-    private String value;
+    private String userId;
 
     /**
      * 
@@ -33,7 +28,7 @@ public class TConfig implements Serializable {
     private Date createTime;
 
     /**
-     * t_config
+     * t_user_login_log
      */
     private static final long serialVersionUID = 1L;
 
@@ -55,34 +50,18 @@ public class TConfig implements Serializable {
 
     /**
      * 
-     * @return key 
+     * @return user_id 
      */
-    public String getKey() {
-        return key;
+    public String getUserId() {
+        return userId;
     }
 
     /**
      * 
-     * @param key 
+     * @param userId 
      */
-    public void setKey(String key) {
-        this.key = key == null ? null : key.trim();
-    }
-
-    /**
-     * 
-     * @return value 
-     */
-    public String getValue() {
-        return value;
-    }
-
-    /**
-     * 
-     * @param value 
-     */
-    public void setValue(String value) {
-        this.value = value == null ? null : value.trim();
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
     }
 
     /**
@@ -108,8 +87,7 @@ public class TConfig implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", key=").append(key);
-        sb.append(", value=").append(value);
+        sb.append(", userId=").append(userId);
         sb.append(", createTime=").append(createTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
